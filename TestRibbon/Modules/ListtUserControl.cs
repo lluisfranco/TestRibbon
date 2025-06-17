@@ -1,5 +1,5 @@
-﻿using DevExpress.XtraBars;
-using DevExpress.XtraBars.Ribbon;
+﻿using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,17 +12,12 @@ using System.Windows.Forms;
 
 namespace TestRibbon
 {
-    public partial class Form2 : RibbonForm, IModuleRibbon
+    public partial class ListUserControl : XtraUserControl, IModuleRibbon
     {
         public RibbonControl GetRibbon() => ribbon;
-        public Form2()
+        public ListUserControl()
         {
             InitializeComponent();
-        }
-
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            MessageBox.Show("Saving");
         }
     }
 }

@@ -39,23 +39,29 @@
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             layoutControl = new DevExpress.XtraLayout.LayoutControl();
-            Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            profileUserControl1 = new ProfileUserControl();
+            listUserControl1 = new ListUserControl();
             homeUserControl1 = new HomeUserControl();
+            Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            tabbedControlGroup = new DevExpress.XtraLayout.TabbedControlGroup();
+            layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)svgImageCollection32).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControl).BeginInit();
             layoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Root).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)tabbedControlGroup1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tabbedControlGroup).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)layoutControlGroup2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)layoutControlGroup3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlGroup2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlGroup3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem3).BeginInit();
             SuspendLayout();
             // 
             // ribbon
@@ -201,6 +207,8 @@
             // 
             // layoutControl
             // 
+            layoutControl.Controls.Add(profileUserControl1);
+            layoutControl.Controls.Add(listUserControl1);
             layoutControl.Controls.Add(homeUserControl1);
             layoutControl.Dock = DockStyle.Fill;
             layoutControl.Images = svgImageCollection32;
@@ -211,23 +219,44 @@
             layoutControl.TabIndex = 2;
             layoutControl.Text = "layoutControl1";
             // 
+            // profileUserControl1
+            // 
+            profileUserControl1.Location = new Point(66, 24);
+            profileUserControl1.Name = "profileUserControl1";
+            profileUserControl1.Size = new Size(718, 426);
+            profileUserControl1.TabIndex = 6;
+            // 
+            // listUserControl1
+            // 
+            listUserControl1.Location = new Point(66, 24);
+            listUserControl1.Name = "listUserControl1";
+            listUserControl1.Size = new Size(718, 426);
+            listUserControl1.TabIndex = 5;
+            // 
+            // homeUserControl1
+            // 
+            homeUserControl1.Location = new Point(66, 24);
+            homeUserControl1.Name = "homeUserControl1";
+            homeUserControl1.Size = new Size(718, 426);
+            homeUserControl1.TabIndex = 4;
+            // 
             // Root
             // 
             Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             Root.GroupBordersVisible = false;
-            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { tabbedControlGroup1 });
+            Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { tabbedControlGroup });
             Root.Name = "Root";
             Root.Size = new Size(808, 474);
             Root.TextVisible = false;
             // 
-            // tabbedControlGroup1
+            // tabbedControlGroup
             // 
-            tabbedControlGroup1.Location = new Point(0, 0);
-            tabbedControlGroup1.Name = "tabbedControlGroup1";
-            tabbedControlGroup1.SelectedTabPage = layoutControlGroup1;
-            tabbedControlGroup1.Size = new Size(788, 454);
-            tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlGroup1, layoutControlGroup2, layoutControlGroup3 });
-            tabbedControlGroup1.TextLocation = DevExpress.Utils.Locations.Left;
+            tabbedControlGroup.Location = new Point(0, 0);
+            tabbedControlGroup.Name = "tabbedControlGroup";
+            tabbedControlGroup.SelectedTabPage = layoutControlGroup1;
+            tabbedControlGroup.Size = new Size(788, 454);
+            tabbedControlGroup.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlGroup1, layoutControlGroup2, layoutControlGroup3 });
+            tabbedControlGroup.TextLocation = DevExpress.Utils.Locations.Left;
             // 
             // layoutControlGroup1
             // 
@@ -238,29 +267,6 @@
             layoutControlGroup1.Size = new Size(722, 430);
             layoutControlGroup1.TextVisible = false;
             // 
-            // layoutControlGroup2
-            // 
-            layoutControlGroup2.CaptionImageOptions.ImageIndex = 16;
-            layoutControlGroup2.Location = new Point(0, 0);
-            layoutControlGroup2.Name = "layoutControlGroup2";
-            layoutControlGroup2.Size = new Size(722, 430);
-            layoutControlGroup2.TextVisible = false;
-            // 
-            // layoutControlGroup3
-            // 
-            layoutControlGroup3.CaptionImageOptions.ImageIndex = 35;
-            layoutControlGroup3.Location = new Point(0, 0);
-            layoutControlGroup3.Name = "layoutControlGroup3";
-            layoutControlGroup3.Size = new Size(722, 430);
-            layoutControlGroup3.TextVisible = false;
-            // 
-            // homeUserControl1
-            // 
-            homeUserControl1.Location = new Point(66, 24);
-            homeUserControl1.Name = "homeUserControl1";
-            homeUserControl1.Size = new Size(718, 426);
-            homeUserControl1.TabIndex = 4;
-            // 
             // layoutControlItem1
             // 
             layoutControlItem1.Control = homeUserControl1;
@@ -268,6 +274,40 @@
             layoutControlItem1.Name = "layoutControlItem1";
             layoutControlItem1.Size = new Size(722, 430);
             layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlGroup2
+            // 
+            layoutControlGroup2.CaptionImageOptions.ImageIndex = 16;
+            layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem2 });
+            layoutControlGroup2.Location = new Point(0, 0);
+            layoutControlGroup2.Name = "layoutControlGroup2";
+            layoutControlGroup2.Size = new Size(722, 430);
+            layoutControlGroup2.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            layoutControlItem2.Control = listUserControl1;
+            layoutControlItem2.Location = new Point(0, 0);
+            layoutControlItem2.Name = "layoutControlItem2";
+            layoutControlItem2.Size = new Size(722, 430);
+            layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlGroup3
+            // 
+            layoutControlGroup3.CaptionImageOptions.ImageIndex = 35;
+            layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem3 });
+            layoutControlGroup3.Location = new Point(0, 0);
+            layoutControlGroup3.Name = "layoutControlGroup3";
+            layoutControlGroup3.Size = new Size(722, 430);
+            layoutControlGroup3.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            layoutControlItem3.Control = profileUserControl1;
+            layoutControlItem3.Location = new Point(0, 0);
+            layoutControlItem3.Name = "layoutControlItem3";
+            layoutControlItem3.Size = new Size(722, 430);
+            layoutControlItem3.TextVisible = false;
             // 
             // Form1
             // 
@@ -286,11 +326,13 @@
             ((System.ComponentModel.ISupportInitialize)layoutControl).EndInit();
             layoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Root).EndInit();
-            ((System.ComponentModel.ISupportInitialize)tabbedControlGroup1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tabbedControlGroup).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)layoutControlGroup2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)layoutControlGroup3).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlGroup2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlGroup3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -307,11 +349,15 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraLayout.LayoutControl layoutControl;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
+        private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private HomeUserControl homeUserControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private ProfileUserControl profileUserControl1;
+        private ListUserControl listUserControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

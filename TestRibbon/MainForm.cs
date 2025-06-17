@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,8 +12,9 @@ using System.Windows.Forms;
 
 namespace TestRibbon
 {
-    public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class MainForm : RibbonForm, IModuleRibbon
     {
+        public RibbonControl GetRibbon() => ribbon;
         public MainForm()
         {
             InitializeComponent();

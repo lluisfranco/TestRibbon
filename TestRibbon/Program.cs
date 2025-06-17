@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace TestRibbon
 {
     internal static class Program
